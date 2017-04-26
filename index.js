@@ -25,9 +25,12 @@ function deepestChild() {
   // let length = outmost.querySelectorAll('div')
 
   while (current) {
+    let next = current.querySelector('div')
     if (next) {
       current = next
-      next = current.querySelector('div')
+    } else {
+
+      return current
     }
   }
 
